@@ -10,9 +10,18 @@ class Program
 
     if (purchase.Equals("Y") || purchase.Equals("y")) {
       Console.WriteLine("Please enter the number of bread loaves you'd like to order:");
+      Bread breadPurchase = new Bread(0);
+      string breadQuantity = Console.ReadLine();
+      breadPurchase.Quantity = int.Parse(breadQuantity);
+
+      Console.WriteLine("Next, please enter the number of pastries you'd like to order:");
+      Pastry pastryPurchase = new Pastry(0);
+      string pastryQuantity = Console.ReadLine();
+      pastryPurchase.Quantity = int.Parse(pastryQuantity);
+
     } else {
       Console.WriteLine("We're sorry to hear you couldn't find what you were looking for... See you next time!");
     }
   }
-
 }
+

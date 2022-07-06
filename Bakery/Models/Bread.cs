@@ -1,3 +1,5 @@
+using System;
+
 namespace Bakery.Models
 {
   public class Bread
@@ -6,9 +8,10 @@ namespace Bakery.Models
     public int Quantity { get; set; }
     public int TotalPrice { get; set; }
 
-    public Bread()
+    public Bread(int quantity)
     {
-      
+      IndividualPrice = 5;
+      Quantity = quantity;
     }
   }
 }

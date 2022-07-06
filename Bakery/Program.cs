@@ -19,6 +19,9 @@ class Program
       string pastryQuantity = Console.ReadLine();
       pastryPurchase.Quantity = int.Parse(pastryQuantity);
 
+      int totalPurchaseCost = breadPurchase.BreadCost() + pastryPurchase.PastryCost();
+      Console.WriteLine("The total Cost of your order today is " + totalPurchaseCost + " dollars.");
+
     } else {
       Console.WriteLine("We're sorry to hear you couldn't find what you were looking for... See you next time!");
     }

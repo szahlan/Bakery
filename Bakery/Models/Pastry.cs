@@ -6,7 +6,6 @@ namespace Bakery.Models
   {
     public int IndividualPrice { get; }
     public int Quantity { get; set; }
-    public int TotalCost { get; set; }
 
     public Pastry(int quantity)
     {
@@ -16,7 +15,16 @@ namespace Bakery.Models
 
     public int PastryCost() 
     {
-      int totalCost = this.Quantity * 2;
+      int totalCost;
+      if (this.Quantity % 3 == 0)
+      {
+        totalCost = (this.Quantity / 3) * 5;
+      } 
+      else 
+      {
+        totalCost = this.Quantity * this.IndividualPrice;
+      }
+      
       return totalCost;
     }
   }

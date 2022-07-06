@@ -30,12 +30,22 @@ namespace Bakery.Tests
       Assert.AreEqual(4, result);
     }
 
+    [TestMethod]
     public void PastryCost_RegularPrice_Int()
     {
       int quantityToPurches = 2;
       Pastry newPastry = new Pastry(quantityToPurches);
       int pastryCost = newPastry.PastryCost();
       Assert.AreEqual(4, pastryCost);
+    }
+    
+    [TestMethod]
+    public void PastryCost_MultipleOfThree_Int()
+    {
+      int quantityToPurches = 6;
+      Pastry newPastry = new Pastry(quantityToPurches);
+      int pastryCost = newPastry.PastryCost();
+      Assert.AreEqual(10, pastryCost);
     }
   }
 }

@@ -37,6 +37,15 @@ namespace Bakery.Tests
       Bread newBread = new Bread(quantityToPurches);
       int breadCost = newBread.BreadCost();
       Assert.AreEqual(10, breadCost);
+    }
+
+    [TestMethod]
+    public void BreadCost_EveryThirdLoafFree_Int()
+    {
+      int quantityToPurches = 6;
+      Bread newBread = new Bread(quantityToPurches);
+      int breadCost = newBread.BreadCost();
+      Assert.AreEqual(20, breadCost);
     }    
   }
 }

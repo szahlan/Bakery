@@ -17,7 +17,16 @@ namespace Bakery.Models
     public int BreadCost()
     {
       int totalCost;
+      if (this.Quantity >= 3)
+      {
+        int numberOfLoavesToSubtract = this.Quantity % 3;
+        int wholeNumberOfLoaves = this.Quantity - numberOfLoavesToSubtract;
+        totalCost = ((this.Quantity * 5) - ((wholeNumberOfLoaves/3) * 5));
+      }
+      else 
+      {
       totalCost = this.Quantity * this.IndividualPrice;
+      }
       return totalCost;
     }
   }

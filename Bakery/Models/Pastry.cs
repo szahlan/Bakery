@@ -18,13 +18,20 @@ namespace Bakery.Models
       int totalCost;
       if (this.Quantity % 3 == 0)
       {
-        totalCost = (this.Quantity / 3) * 5;
+        totalCost = this.Quantity / 3 * 5;
       } 
-      else 
+      else if (this.Quantity % 4 == 0)
+      {
+        totalCost = this.Quantity / 4 * 7;
+      } 
+      else if (this.Quantity % 5 == 0) 
+      {
+        totalCost = this.Quantity / 5 * 9;
+      }
+      else
       {
         totalCost = this.Quantity * this.IndividualPrice;
       }
-      
       return totalCost;
     }
   }

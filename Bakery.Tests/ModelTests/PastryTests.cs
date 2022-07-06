@@ -56,5 +56,14 @@ namespace Bakery.Tests
       int pastryCost = newPastry.PastryCost();
       Assert.AreEqual(14, pastryCost);
     }
+
+    [TestMethod]
+    public void PastryCost_MultipleOfFive_Int()
+    {
+      int quantityToPurches = 10;
+      Pastry newPastry = new Pastry(quantityToPurches);
+      int pastryCost = newPastry.PastryCost();
+      Assert.AreEqual(18, pastryCost);
+    }
   }
 }

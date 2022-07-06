@@ -47,5 +47,14 @@ namespace Bakery.Tests
       int pastryCost = newPastry.PastryCost();
       Assert.AreEqual(10, pastryCost);
     }
+
+    [TestMethod]
+    public void PastryCost_MultipleOfFour_Int()
+    {
+      int quantityToPurches = 8;
+      Pastry newPastry = new Pastry(quantityToPurches);
+      int pastryCost = newPastry.PastryCost();
+      Assert.AreEqual(14, pastryCost);
+    }
   }
 }

@@ -13,5 +13,12 @@ namespace Bakery.Models
       IndividualPrice = 5;
       Quantity = quantity;
     }
+
+    public int BreadCost()
+    {
+      int totalCost;
+      totalCost = this.Quantity * this.IndividualPrice;
+      return totalCost;
+    }
   }
 }

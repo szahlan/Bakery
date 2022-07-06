@@ -29,5 +29,14 @@ namespace Bakery.Tests
       int result = newBread.Quantity;
       Assert.AreEqual(4, result);
     }
+
+    [TestMethod]
+    public void BreadCost_RegularPrice_Int()
+    {
+      int quantityToPurches = 2;
+      Bread newBread = new Bread(quantityToPurches);
+      int breadCost = newBread.BreadCost();
+      Assert.AreEqual(10, breadCost);
+    }    
   }
 }
